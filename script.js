@@ -282,7 +282,7 @@ const CONFIG = {
       capacity: "Up to 2 Guests",
       bed: "1 Large Double Bed",
       view: "Direct Annapurna & Machhapuchhre Vista",
-      image: "assets/images/room_himalayan_view_1792847353643.jpg",
+      image: "assets/images/room_himalayan_view.jpg",
       description: "Bright room with natural Himalayan pine accents, warm woolen duvets, panoramic window frames capturing morning sunlight over the peaks, and attached private washroom.",
       amenities: ["Mountain View Window", "Attached Bathroom", "Clean Warm Linens", "Tea/Coffee Service", "Charging Sockets"],
       priceNpr: 2500,
@@ -294,7 +294,7 @@ const CONFIG = {
       capacity: "Up to 3-4 Guests",
       bed: "1 Double Bed + 1 Single Bed",
       view: "Valley & Snow Peak Panorama",
-      image: "assets/images/room_himalayan_view_1792847353643.jpg",
+      image: "assets/images/room_himalayan_view.jpg",
       description: "Spacious family layout ideal for traveling groups and families visiting Kaski. Quiet atmosphere, seating area, direct terrace access, and pristine mountain air.",
       amenities: ["Terrace View Access", "Multiple Beds", "Warm Blankets", "Spacious Layout", "Room Service Dining"],
       priceNpr: 3200,
@@ -306,7 +306,7 @@ const CONFIG = {
       capacity: "1-2 Guests",
       bed: "2 Single Twin Beds",
       view: "Hillside Garden & Trail View",
-      image: "assets/images/room_himalayan_view_1792847353643.jpg",
+      image: "assets/images/room_himalayan_view.jpg",
       description: "Comfortable, economical retreat designed for trekkers, backpackers, and highway travelers needing peaceful sleep, a hot meal, and an early morning start.",
       amenities: ["Comfortable Twin Beds", "Fresh Towels", "Quiet Corner", "Luggage Storage Space"],
       priceNpr: 1800,
@@ -320,31 +320,31 @@ const CONFIG = {
       id: "gal-real-exterior",
       category: "property",
       title: "Hotel Exterior & Annapurna Peak Panorama",
-      image: "assets/aistudio/IMG_6797_994b48c8.jpeg",
-      badge: "Real Property Photo",
+      image: "assets/images/hotel_exterior_annapurna.jpg",
+      badge: "Annapurna Viewpoint",
       caption: "Lucky Twins hotel terrace against the majestic backdrop of snowcapped Annapurna and Machhapuchhre (Fishtail) peaks."
     },
     {
       id: "gal-real-board",
       category: "property",
       title: "Official Roadside Billboard — Kaski Highway",
-      image: "assets/aistudio/IMG_6796_e61389e5.jpeg",
-      badge: "Real Signpost",
+      image: "assets/images/hotel_signboard_kaski.jpg",
+      badge: "Highway Landmark",
       caption: "Highway landmark board at Annapurna-1, Kaski, managed by Proprietor Ex. Army Yubaraj KC."
     },
     {
       id: "gal-real-menu",
       category: "food",
-      title: "Authentic In-House Menu Board & Aquarium",
-      image: "assets/aistudio/IMG_6795_ae7e2561.jpeg",
+      title: "Authentic In-House Menu Board",
+      image: "assets/images/restaurant_menu_board.jpg",
       badge: "Verified Menu",
-      caption: "The restaurant's handwritten whiteboard featuring Nepali Khana, Khaja snacks, and the signature 'Ek Chari Panch Thari'."
+      caption: "The restaurant's chalkboard featuring Nepali Khana, Khaja snacks, and the signature 'Ek Chari Panch Thari'."
     },
     {
       id: "gal-khana-thali",
       category: "food",
       title: "Hand-Crafted Nepali Khana Thali",
-      image: "assets/images/nepali_thali_curry_1792847355014.jpg",
+      image: "assets/images/nepali_thali_curry.jpg",
       badge: "Signature Dining",
       caption: "Traditional brass platter serving freshly cooked local chicken curry, lentil soup, rice, and mountain timur pickle."
     },
@@ -352,7 +352,7 @@ const CONFIG = {
       id: "gal-woodfire-hearth",
       category: "food",
       title: "Traditional Wood-Fire Cooking Hearth",
-      image: "assets/images/woodfire_chicken_hearth_1792847355743.jpg",
+      image: "assets/images/woodfire_chicken_hearth.jpg",
       badge: "Mountain Kitchen",
       caption: "Slow-simmered chicken curry prepared over open firewood embers, infusing rich rustic smoky flavor into every bite."
     },
@@ -360,7 +360,7 @@ const CONFIG = {
       id: "gal-dhindo-set",
       category: "food",
       title: "Traditional Himalayan Dhindo Set",
-      image: "assets/images/dhindo_mountain_specialty_1792847355587.jpg",
+      image: "assets/images/dhindo_mountain_specialty.jpg",
       badge: "Himalayan Specialty",
       caption: "Hot organic buckwheat dhindo with pure clarified ghee and tender mountain meat gravy."
     },
@@ -368,7 +368,7 @@ const CONFIG = {
       id: "gal-room-interior",
       category: "rooms",
       title: "Pine-Wood Mountain Lodge Room",
-      image: "assets/images/room_himalayan_view_1792847353643.jpg",
+      image: "assets/images/room_himalayan_view.jpg",
       badge: "Accommodation",
       caption: "Cozy interior with panoramic view windows, clean bedding, and natural wood aesthetics."
     }
@@ -519,7 +519,7 @@ function initMenu() {
 
   if (viewOriginalMenuBtn) {
     viewOriginalMenuBtn.addEventListener("click", () => {
-      openLightbox("assets/aistudio/IMG_6795_ae7e2561.jpeg", "Original Authentic Whiteboard Menu Board at Lucky Twins Restaurant");
+      openLightbox("assets/images/restaurant_menu_board.jpg", "Authentic Mountain Lodge Chalkboard Menu Board with Nepali Khana & Khaja");
     });
   }
 
