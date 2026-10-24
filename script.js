@@ -457,8 +457,41 @@ function initNavigation() {
   if (mobileClose) mobileClose.addEventListener("click", closeDrawer);
   if (mobileBackdrop) mobileBackdrop.addEventListener("click", closeDrawer);
 
+  // Swipe gesture to close drawer on touch screens
+  let touchStartX = 0;
+  let touchEndX = 0;
+  if (mobileDrawer) {
+    mobileDrawer.addEventListener("touchstart", (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+    mobileDrawer.addEventListener("touchend", (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      if (touchEndX - touchStartX > 50) {
+        closeDrawer();
+      }
+    }, { passive: true });
+  }
+
   mobileLinks.forEach(link => {
-    link.addEventListener("click", closeDrawer);
+    link.addEventListener("click", (e) => {
+      const targetId = link.getAttribute("href");
+      closeDrawer();
+      if (targetId && targetId.startsWith("#")) {
+        const targetEl = document.querySelector(targetId);
+        if (targetEl) {
+          e.preventDefault();
+          setTimeout(() => {
+            const headerOffset = window.innerWidth <= 860 ? 70 : 90;
+            const elementPosition = targetEl.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: "smooth"
+            });
+          }, 150);
+        }
+      }
+    });
   });
 
   // Smooth scroll & active state tracking
@@ -599,6 +632,21 @@ function initGallery() {
     lightbox.addEventListener("click", (e) => {
       if (e.target === lightbox) closeLightbox();
     });
+
+    // Touch swipe left/right for mobile photo browsing
+    let lbStartX = 0;
+    let lbEndX = 0;
+    lightbox.addEventListener("touchstart", (e) => {
+      lbStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+    lightbox.addEventListener("touchend", (e) => {
+      lbEndX = e.changedTouches[0].screenX;
+      if (lbStartX - lbEndX > 45) {
+        showNextLightboxImage();
+      } else if (lbEndX - lbStartX > 45) {
+        showPrevLightboxImage();
+      }
+    }, { passive: true });
   }
 
   document.addEventListener("keydown", (e) => {

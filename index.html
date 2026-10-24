@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     
     <!-- Primary SEO Metadata -->
     <title>Lucky Twins Annapurna View Point Hotel & Restaurant | Gandaki, Nepal</title>
@@ -104,7 +104,11 @@
             Book Now
           </a>
           <button class="mobile-toggle" aria-label="Open mobile navigation menu">
-            ☰
+            <div class="hamburger-icon" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
           </button>
         </div>
       </div>
@@ -114,13 +118,17 @@
     <div class="mobile-nav-backdrop" aria-hidden="true"></div>
     <aside class="mobile-nav-drawer" aria-label="Mobile Navigation Drawer">
       <div>
-        <button class="mobile-close-btn" aria-label="Close navigation menu">✕</button>
-        <div style="margin-top: 1.5rem; font-family: var(--font-serif); font-size: 1.4rem; color: var(--color-sandstone); font-weight: 700;">
-          Lucky Twins
+        <div class="mobile-nav-header">
+          <div>
+            <div style="font-family: var(--font-serif); font-size: 1.35rem; color: var(--color-sandstone); font-weight: 700; line-height: 1.2;">
+              Lucky Twins
+            </div>
+            <p style="font-size: 0.75rem; color: rgba(248, 245, 238, 0.7); margin-top: 0.2rem;">
+              Annapurna View Point Hotel &amp; Restaurant
+            </p>
+          </div>
+          <button class="mobile-close-btn" aria-label="Close navigation menu">✕</button>
         </div>
-        <p style="font-size: 0.8rem; color: rgba(248, 245, 238, 0.7); margin-top: 0.25rem;">
-          Annapurna View Point Hotel &amp; Restaurant
-        </p>
 
         <ul class="mobile-nav-links">
           <li><a href="#home">Home</a></li>
@@ -464,8 +472,8 @@
               <button class="menu-tab-btn" data-category="drinks" role="tab" aria-selected="false">Beverages</button>
             </div>
 
-            <div style="display: flex; gap: 0.75rem; align-items: center; width: 100%; max-width: 420px;">
-              <div class="menu-search-wrap" style="flex-grow: 1;">
+            <div class="menu-search-row">
+              <div class="menu-search-wrap">
                 <svg class="menu-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                   <circle cx="11" cy="11" r="8"></circle>
                   <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
@@ -990,7 +998,7 @@
             </select>
           </div>
 
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+          <div class="form-row-2col">
             <div class="form-group">
               <label for="roomCheckin" class="form-label">Check-in Date *</label>
               <input type="date" id="roomCheckin" class="form-control" required />
@@ -1001,7 +1009,7 @@
             </div>
           </div>
 
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+          <div class="form-row-2col">
             <div class="form-group">
               <label for="roomAdults" class="form-label">Adults</label>
               <select id="roomAdults" class="form-control">
