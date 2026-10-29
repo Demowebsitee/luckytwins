@@ -8,22 +8,26 @@
    1. CSS Custom Properties & Design Tokens
    -------------------------------------------------------------------------- */
 :root {
-  --color-forest: #173D32;
-  --color-forest-dark: #102A25;
-  --color-forest-light: #235245;
-  --color-forest-subtle: rgba(23, 61, 50, 0.06);
-  --color-ivory: #F8F5EE;
-  --color-ivory-warm: #F2ECE0;
-  --color-sandstone: #D7C3A3;
-  --color-sandstone-light: #EBE1D0;
-  --color-gold: #C5A36A;
-  --color-gold-hover: #AF8C52;
-  --color-gold-subtle: rgba(197, 163, 106, 0.15);
-  --color-charcoal: #242824;
-  --color-muted: #5F675F;
-  --color-border: rgba(36, 40, 36, 0.12);
-  --color-border-light: rgba(248, 245, 238, 0.18);
+  --color-forest: #173B31;
+  --color-forest-dark: #0A201B;
+  --color-forest-light: #2A5849;
+  --color-forest-subtle: rgba(23, 59, 49, 0.06);
+  --color-ivory: #FBF8F1;
+  --color-ivory-warm: #F4EDDF;
+  --color-sandstone: #E2D0B0;
+  --color-sandstone-light: #F0E7D6;
+  --color-gold: #C9A86A;
+  --color-gold-hover: #AE8B4D;
+  --color-gold-subtle: rgba(201, 168, 106, 0.16);
+  --color-charcoal: #232925;
+  --color-muted: #5D675F;
+  --color-border: rgba(35, 41, 37, 0.12);
+  --color-border-light: rgba(251, 248, 241, 0.18);
   --color-white: #FFFFFF;
+
+  --gradient-gold: linear-gradient(135deg, #E0C892 0%, #C9A86A 52%, #AC894A 100%);
+  --gradient-forest: linear-gradient(135deg, #0A201B 0%, #173B31 55%, #0D2A22 100%);
+  --gradient-cream: linear-gradient(180deg, #FBF8F1 0%, #F4EDDF 100%);
   
   --font-serif: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
   --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -38,9 +42,9 @@
   --radius-lg: 14px;
   --radius-full: 9999px;
 
-  --shadow-subtle: 0 4px 20px rgba(16, 42, 37, 0.05);
-  --shadow-card: 0 10px 30px rgba(16, 42, 37, 0.08);
-  --shadow-elevated: 0 20px 40px rgba(16, 42, 37, 0.14);
+  --shadow-subtle: 0 6px 24px rgba(10, 32, 27, 0.06);
+  --shadow-card: 0 14px 38px rgba(10, 32, 27, 0.09);
+  --shadow-elevated: 0 24px 55px rgba(10, 32, 27, 0.16);
 
   --container-max: 1240px;
   --header-height: 80px;
@@ -68,6 +72,7 @@ html {
 body {
   font-family: var(--font-sans);
   background-color: var(--color-ivory);
+  background-image: radial-gradient(1100px 520px at 88% -8%, rgba(201, 168, 106, 0.08), transparent 68%);
   color: var(--color-charcoal);
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
@@ -141,8 +146,10 @@ p {
 }
 
 .section-dark {
-  background-color: var(--color-forest);
+  background: var(--gradient-forest);
   color: var(--color-ivory);
+  border-top: 1px solid rgba(201, 168, 106, 0.16);
+  border-bottom: 1px solid rgba(201, 168, 106, 0.16);
 }
 
 .section-dark h1,
@@ -157,7 +164,7 @@ p {
 }
 
 .section-alt {
-  background-color: var(--color-ivory-warm);
+  background: var(--gradient-cream);
 }
 
 .section-header {
@@ -168,18 +175,19 @@ p {
 .eyebrow {
   display: inline-block;
   font-family: var(--font-sans);
-  font-size: 0.8125rem;
-  font-weight: 600;
-  letter-spacing: 0.14em;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--color-gold);
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.85rem;
 }
 
 .section-title {
   font-size: clamp(1.85rem, 3.5vw, 3rem);
   letter-spacing: -0.01em;
   margin-bottom: 1rem;
+  text-wrap: balance;
 }
 
 .section-desc {
@@ -193,9 +201,10 @@ p {
 }
 
 .gold-divider {
-  width: 48px;
+  width: 56px;
   height: 2px;
-  background-color: var(--color-gold);
+  background: var(--gradient-gold);
+  border-radius: 2px;
   margin: 1.25rem auto 0;
 }
 
@@ -225,45 +234,47 @@ p {
 }
 
 .btn-primary {
-  background-color: var(--color-gold);
-  color: var(--color-forest-dark);
-  box-shadow: 0 4px 12px rgba(197, 163, 106, 0.25);
+  background: var(--gradient-gold);
+  color: #0A201B;
+  box-shadow: 0 6px 18px rgba(201, 168, 106, 0.28);
 }
 
 .btn-primary:hover {
-  background-color: var(--color-gold-hover);
-  color: var(--color-white);
+  background: linear-gradient(135deg, #C9A86A 0%, #AE8B4D 60%, #97763C 100%);
+  color: #071713;
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(197, 163, 106, 0.35);
+  box-shadow: 0 10px 24px rgba(201, 168, 106, 0.38);
 }
 
 .btn-secondary {
   background-color: transparent;
   color: var(--color-ivory);
-  border: 1px solid var(--color-sandstone);
+  border: 1px solid rgba(226, 208, 176, 0.65);
 }
 
 .btn-secondary:hover {
-  background-color: rgba(248, 245, 238, 0.1);
+  background-color: rgba(251, 248, 241, 0.1);
   color: var(--color-white);
   border-color: var(--color-white);
 }
 
 .btn-dark {
-  background-color: var(--color-forest);
+  background: linear-gradient(135deg, var(--color-forest) 0%, var(--color-forest-dark) 100%);
   color: var(--color-ivory);
+  box-shadow: 0 6px 16px rgba(10, 32, 27, 0.16);
 }
 
 .btn-dark:hover {
-  background-color: var(--color-forest-dark);
+  background: var(--color-forest-dark);
   color: var(--color-white);
   transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(10, 32, 27, 0.24);
 }
 
 .btn-outline-dark {
   background-color: transparent;
   color: var(--color-forest);
-  border: 1px solid var(--color-forest);
+  border: 1px solid rgba(23, 59, 49, 0.45);
 }
 
 .btn-outline-dark:hover {
@@ -272,12 +283,13 @@ p {
 }
 
 .btn-whatsapp {
-  background-color: #25D366;
+  background: linear-gradient(135deg, #1E9E5B 0%, #12824A 100%);
   color: #FFFFFF;
+  box-shadow: 0 6px 16px rgba(18, 130, 74, 0.22);
 }
 
 .btn-whatsapp:hover {
-  background-color: #1EBE5D;
+  background: linear-gradient(135deg, #1B8D51 0%, #0E6E3D 100%);
   color: #FFFFFF;
   transform: translateY(-2px);
 }
@@ -310,59 +322,73 @@ p {
 }
 
 .top-header.nav-scrolled {
-  background-color: rgba(16, 42, 37, 0.95);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(215, 195, 163, 0.2);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  background-color: rgba(10, 32, 27, 0.96);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(201, 168, 106, 0.28);
+  box-shadow: 0 10px 34px rgba(0, 0, 0, 0.26);
 }
 
 .nav-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1.5rem;
+  gap: 1.25rem;
   height: 100%;
 }
 
 .brand-wordmark {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  font-family: var(--font-serif);
-  font-size: 1.35rem;
-  font-weight: 700;
-  letter-spacing: -0.01em;
+  gap: 0.8rem;
   color: var(--color-ivory);
   white-space: nowrap;
   flex-shrink: 0;
 }
 
-.brand-emblem {
-  width: 2.125rem;
-  height: 2.125rem;
-  border-radius: 50%;
-  border: 1px solid var(--color-gold);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-gold);
+.brand-logo {
+  width: 46px;
+  height: 46px;
   flex-shrink: 0;
-  font-size: 0.8125rem;
+  filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.28));
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1;
+}
+
+.brand-name {
   font-family: var(--font-serif);
+  font-size: 1.32rem;
+  font-weight: 700;
+  letter-spacing: 0.005em;
+  color: var(--color-ivory);
+}
+
+.brand-sub {
+  margin-top: 0.32rem;
+  font-family: var(--font-sans);
+  font-size: 0.56rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-sandstone);
 }
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 1.75rem;
+  gap: 1.4rem;
   list-style: none;
 }
 
 .nav-link {
-  font-size: 0.875rem;
+  font-size: 0.845rem;
   font-weight: 500;
-  color: rgba(248, 245, 238, 0.85);
+  color: rgba(251, 248, 241, 0.86);
   white-space: nowrap;
   flex-shrink: 0;
   position: relative;
@@ -443,7 +469,7 @@ p {
   max-width: 320px;
   height: 100%;
   height: 100dvh;
-  background-color: var(--color-forest-dark);
+  background: var(--gradient-forest);
   z-index: 2001;
   padding: 1.5rem;
   display: flex;
@@ -480,8 +506,42 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 0.75rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid rgba(215, 195, 163, 0.15);
+  border-bottom: 1px solid rgba(201, 168, 106, 0.2);
+}
+
+.mobile-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.mobile-brand-logo {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+}
+
+.mobile-brand-name {
+  font-family: var(--font-serif);
+  font-size: 1.02rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--color-ivory);
+  white-space: nowrap;
+}
+
+.mobile-brand-sub {
+  margin-top: 0.28rem;
+  font-size: 0.5rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--color-sandstone);
+  white-space: nowrap;
 }
 
 .mobile-close-btn {
@@ -554,7 +614,7 @@ p {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 38%;
+  object-position: center 46%;
   filter: brightness(0.88);
 }
 
@@ -563,9 +623,9 @@ p {
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(16, 42, 37, 0.75) 0%,
-    rgba(16, 42, 37, 0.55) 45%,
-    rgba(16, 42, 37, 0.9) 85%,
+    rgba(10, 32, 27, 0.82) 0%,
+    rgba(10, 32, 27, 0.52) 42%,
+    rgba(10, 32, 27, 0.9) 84%,
     var(--color-forest-dark) 100%
   );
   z-index: 2;
@@ -582,13 +642,21 @@ p {
 .hero-kicker-pill {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  font-size: 0.8125rem;
+  gap: 0.65rem;
+  font-size: 0.75rem;
   font-weight: 600;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--color-sandstone);
   margin-bottom: 1rem;
+}
+
+.hero-kicker-pill::before {
+  content: '';
+  width: 2rem;
+  height: 1px;
+  background: var(--gradient-gold);
+  flex-shrink: 0;
 }
 
 .hero-title {
@@ -648,9 +716,9 @@ p {
    7. Verified Property Highlight Ribbon
    -------------------------------------------------------------------------- */
 .property-banner-strip {
-  background-color: var(--color-forest-dark);
-  border-top: 1px solid rgba(215, 195, 163, 0.15);
-  border-bottom: 1px solid rgba(215, 195, 163, 0.15);
+  background: linear-gradient(180deg, #0A201B 0%, #102C24 100%);
+  border-top: 1px solid rgba(201, 168, 106, 0.24);
+  border-bottom: 1px solid rgba(201, 168, 106, 0.24);
   padding: 1.25rem 0;
 }
 
@@ -696,6 +764,16 @@ p {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
+}
+
+.owner-photo {
+  aspect-ratio: 1 / 1;
+  object-position: center 42%;
+  border: 1px solid rgba(201, 168, 106, 0.35);
+}
+
+.owner-caption {
+  border-left-color: var(--color-gold);
 }
 
 .story-overlay-card {
@@ -765,12 +843,12 @@ p {
    9. Signature Wood-Fire & "Ek Chari Panch Thari" Showcase
    -------------------------------------------------------------------------- */
 .signature-card {
-  background: linear-gradient(135deg, var(--color-forest) 0%, var(--color-forest-dark) 100%);
+  background: var(--gradient-forest);
   border-radius: var(--radius-lg);
   color: var(--color-ivory);
   overflow: hidden;
   box-shadow: var(--shadow-elevated);
-  border: 1px solid rgba(215, 195, 163, 0.2);
+  border: 1px solid rgba(201, 168, 106, 0.28);
 }
 
 .signature-grid {
@@ -796,6 +874,7 @@ p {
   font-size: clamp(1.85rem, 3vw, 2.6rem);
   color: var(--color-white);
   margin-bottom: 0.75rem;
+  text-wrap: balance;
 }
 
 .signature-nepali {
@@ -820,11 +899,34 @@ p {
   overflow: hidden;
 }
 
-.signature-media img {
+.signature-media > img {
   width: 100%;
   height: 100%;
   min-height: 380px;
   object-fit: cover;
+}
+
+.signature-media.signature-photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  border-left: 1px solid rgba(201, 168, 106, 0.22);
+  background:
+    radial-gradient(120% 100% at 50% 45%, #24362a 0%, #213227 58%, #1c2e23 100%);
+}
+
+.signature-photo img {
+  display: block;
+  width: auto;
+  height: auto;
+  min-height: 0;
+  max-width: 100%;
+  max-height: 580px;
+  object-fit: contain;
+  border-radius: 6px;
+  border: 1px solid rgba(201, 168, 106, 0.32);
+  box-shadow: 0 20px 44px rgba(0, 0, 0, 0.42);
 }
 
 /* --------------------------------------------------------------------------
@@ -837,19 +939,20 @@ p {
 }
 
 .room-card {
-  background-color: var(--color-white);
+  background-color: #FFFDF9;
   border-radius: var(--radius-md);
   overflow: hidden;
   box-shadow: var(--shadow-card);
-  border: 1px solid var(--color-border);
+  border: 1px solid rgba(201, 168, 106, 0.22);
   display: flex;
   flex-direction: column;
-  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
 }
 
 .room-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-elevated);
+  border-color: rgba(201, 168, 106, 0.5);
 }
 
 .room-media {
@@ -874,7 +977,7 @@ p {
   position: absolute;
   top: 0.75rem;
   left: 0.75rem;
-  background-color: rgba(16, 42, 37, 0.85);
+  background-color: rgba(10, 32, 27, 0.9);
   color: var(--color-sandstone);
   padding: 0.35rem 0.65rem;
   border-radius: var(--radius-sm);
@@ -882,6 +985,7 @@ p {
   font-weight: 600;
   letter-spacing: 0.05em;
   backdrop-filter: blur(4px);
+  border: 1px solid rgba(201, 168, 106, 0.32);
 }
 
 .room-content {
@@ -955,6 +1059,52 @@ p {
   font-size: 1.15rem;
   font-weight: 700;
   color: var(--color-forest);
+}
+
+.room-group-note {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  padding: 1.5rem 1.75rem;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(201, 168, 106, 0.38);
+  background:
+    radial-gradient(600px 160px at 100% 0%, rgba(201, 168, 106, 0.16), transparent 70%),
+    rgba(255, 253, 249, 0.75);
+  box-shadow: var(--shadow-subtle);
+}
+
+.room-group-note h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.35rem;
+}
+
+.room-group-note p {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  max-width: 62ch;
+}
+
+.room-group-note .eyebrow {
+  margin-bottom: 0.4rem;
+}
+
+@media (max-width: 580px) {
+  .room-group-note {
+    padding: 1.35rem 1.15rem;
+  }
+
+  .room-group-note .btn {
+    width: 100%;
+  }
+
+  .signature-price span {
+    display: block;
+    margin-top: 0.3rem;
+  }
 }
 
 /* --------------------------------------------------------------------------
@@ -1259,6 +1409,11 @@ p {
   background-color: var(--color-forest-dark);
 }
 
+.gallery-item:focus-visible {
+  outline: 3px solid var(--color-gold);
+  outline-offset: 4px;
+}
+
 .gallery-item img {
   width: 100%;
   height: 100%;
@@ -1297,6 +1452,18 @@ p {
   color: var(--color-sandstone);
   text-transform: uppercase;
   letter-spacing: 0.05em;
+}
+
+/* Touch devices and small screens cannot hover — keep captions readable */
+@media (hover: none), (max-width: 860px) {
+  .gallery-caption-overlay {
+    opacity: 1;
+    background: linear-gradient(0deg, rgba(16, 42, 37, 0.92) 0%, rgba(16, 42, 37, 0.35) 42%, transparent 70%);
+  }
+
+  .gallery-caption-title {
+    font-size: 1.05rem;
+  }
 }
 
 /* Fullscreen Lightbox Modal (Mobile Optimized) */
@@ -1700,7 +1867,8 @@ p {
 }
 
 .floating-whatsapp {
-  background-color: #25D366;
+  background: linear-gradient(135deg, #1E9E5B 0%, #12824A 100%);
+  border: 1px solid rgba(255, 255, 255, 0.22);
 }
 
 .floating-phone {
@@ -1769,11 +1937,42 @@ p {
    19. Footer
    -------------------------------------------------------------------------- */
 .site-footer {
-  background-color: #0E1D19;
-  color: rgba(248, 245, 238, 0.75);
+  background:
+    radial-gradient(900px 320px at 18% 0%, rgba(201, 168, 106, 0.08), transparent 70%),
+    #071713;
+  color: rgba(251, 248, 241, 0.75);
   padding: 4.5rem 0 2rem;
-  border-top: 1px solid rgba(215, 195, 163, 0.15);
+  border-top: 1px solid rgba(201, 168, 106, 0.18);
   font-size: 0.875rem;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.footer-brand-logo {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+}
+
+.footer-brand-title {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  line-height: 1.1;
+  color: var(--color-ivory);
+  margin-bottom: 0.2rem;
+}
+
+.footer-brand-sub {
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-sandstone);
 }
 
 .footer-grid {
@@ -1781,13 +1980,6 @@ p {
   grid-template-columns: 1.5fr 1fr 1fr 1.25fr;
   gap: 2.5rem;
   margin-bottom: 3.5rem;
-}
-
-.footer-brand-title {
-  font-family: var(--font-serif);
-  font-size: 1.45rem;
-  color: var(--color-ivory);
-  margin-bottom: 0.75rem;
 }
 
 .footer-tagline {
@@ -1869,12 +2061,61 @@ p {
 /* --------------------------------------------------------------------------
    21. Comprehensive Responsive Breakpoints
    -------------------------------------------------------------------------- */
+@media (max-width: 1120px) {
+  .brand-name {
+    font-size: 1.18rem;
+  }
+
+  .brand-sub {
+    font-size: 0.52rem;
+    letter-spacing: 0.12em;
+  }
+
+  .nav-links {
+    gap: 0.95rem;
+  }
+
+  .nav-link {
+    font-size: 0.8rem;
+  }
+
+  .nav-action .btn {
+    padding-left: 1.1rem;
+    padding-right: 1.1rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 980px) {
+  .nav-links,
+  .nav-action .btn-primary {
+    display: none;
+  }
+
+  .mobile-toggle {
+    display: flex;
+  }
+}
+
 @media (max-width: 1024px) {
   .story-grid,
   .location-grid,
   .signature-grid {
     grid-template-columns: 1fr;
     gap: 2.25rem;
+  }
+
+  .signature-media.signature-photo {
+    border-left: 0;
+    border-top: 1px solid rgba(201, 168, 106, 0.22);
+    padding: 1.75rem 1.25rem;
+  }
+
+  .signature-photo img {
+    width: auto;
+    max-width: 100%;
+    max-height: 600px;
+    margin-inline: auto;
   }
 
   .story-overlay-card {
@@ -1908,14 +2149,21 @@ p {
   }
 
   .brand-wordmark {
-    font-size: 1.15rem;
-    gap: 0.5rem;
+    gap: 0.55rem;
   }
 
-  .brand-emblem {
-    width: 1.85rem;
-    height: 1.85rem;
-    font-size: 0.75rem;
+  .brand-logo {
+    width: 38px;
+    height: 38px;
+  }
+
+  .brand-name {
+    font-size: 1.05rem;
+  }
+
+  .brand-sub {
+    font-size: 0.5rem;
+    letter-spacing: 0.1em;
   }
 
   .nav-links,
@@ -1946,6 +2194,10 @@ p {
     width: 2.5rem;
     height: 2.5rem;
     font-size: 1.1rem;
+  }
+
+  .footer-bottom {
+    padding-bottom: 3.25rem;
   }
 
   .menu-toolbar {
@@ -2049,7 +2301,7 @@ p {
     padding: 1.75rem 1.25rem;
   }
 
-  .signature-media img {
+  .signature-media:not(.signature-photo) img {
     min-height: 240px;
     max-height: 280px;
   }
@@ -2096,8 +2348,22 @@ p {
 }
 
 @media (max-width: 380px) {
-  .brand-wordmark span:last-child {
-    font-size: 1.05rem;
+  .hero-kicker-pill::before {
+    display: none;
+  }
+
+  .brand-logo {
+    width: 34px;
+    height: 34px;
+  }
+
+  .brand-name {
+    font-size: 0.98rem;
+  }
+
+  .brand-sub {
+    font-size: 0.46rem;
+    letter-spacing: 0.07em;
   }
 
   .banner-strip-grid {

@@ -282,95 +282,144 @@ const CONFIG = {
       capacity: "Up to 2 Guests",
       bed: "1 Large Double Bed",
       view: "Direct Annapurna & Machhapuchhre Vista",
-      image: "assets/images/room_himalayan_view.jpg",
+      image: "assets/images/web/double_bed.jpg",
       description: "Bright room with natural Himalayan pine accents, warm woolen duvets, panoramic window frames capturing morning sunlight over the peaks, and attached private washroom.",
       amenities: ["Mountain View Window", "Attached Bathroom", "Clean Warm Linens", "Tea/Coffee Service", "Charging Sockets"],
       priceNpr: 2500,
       priceNote: "Indicative rate per night (seasonal confirmation required)"
     },
     {
-      id: "room-family",
-      name: "Annapurna Ridge Family Retreat",
-      capacity: "Up to 3-4 Guests",
-      bed: "1 Double Bed + 1 Single Bed",
-      view: "Valley & Snow Peak Panorama",
-      image: "assets/images/room_himalayan_view.jpg",
-      description: "Spacious family layout ideal for traveling groups and families visiting Kaski. Quiet atmosphere, seating area, direct terrace access, and pristine mountain air.",
-      amenities: ["Terrace View Access", "Multiple Beds", "Warm Blankets", "Spacious Layout", "Room Service Dining"],
-      priceNpr: 3200,
-      priceNote: "Indicative rate per night (seasonal confirmation required)"
-    },
-    {
-      id: "room-trekker",
-      name: "Trekker's Rest Cozy Room",
+      id: "room-twin",
+      name: "Trekker's Rest Twin Room",
       capacity: "1-2 Guests",
       bed: "2 Single Twin Beds",
-      view: "Hillside Garden & Trail View",
-      image: "assets/images/room_himalayan_view.jpg",
-      description: "Comfortable, economical retreat designed for trekkers, backpackers, and highway travelers needing peaceful sleep, a hot meal, and an early morning start.",
-      amenities: ["Comfortable Twin Beds", "Fresh Towels", "Quiet Corner", "Luggage Storage Space"],
+      view: "Quiet Hillside & Garden Side",
+      image: "assets/images/web/bedroom.jpg",
+      description: "A quiet, twin-bed room for trekkers, backpackers, and highway travellers who need restful sleep, a hot meal, and an early morning start.",
+      amenities: ["2 Comfortable Twin Beds", "Fresh Towels", "Quiet Corner", "Luggage Storage Space", "Hot Water"],
       priceNpr: 1800,
       priceNote: "Indicative rate per night (seasonal confirmation required)"
     }
   ],
 
-  // Gallery items combining real owner photography with high-res atmosphere photos
+  // Gallery items — all photographs supplied in assets/images
   gallery: [
     {
-      id: "gal-real-exterior",
+      id: "gal-restro-front",
       category: "property",
-      title: "Hotel Exterior & Annapurna Peak Panorama",
-      image: "assets/images/hotel_exterior_annapurna.jpg",
-      badge: "Annapurna Viewpoint",
-      caption: "Lucky Twins hotel terrace against the majestic backdrop of snowcapped Annapurna and Machhapuchhre (Fishtail) peaks."
-    },
-    {
-      id: "gal-real-board",
-      category: "property",
-      title: "Official Roadside Billboard — Kaski Highway",
-      image: "assets/images/hotel_signboard_kaski.jpg",
+      title: "Lucky Twins Roadside Frontage & Signboard",
+      image: "assets/images/web/restro_front.jpg",
+      thumb: "assets/images/web/thumbs/restro_front.jpg",
       badge: "Highway Landmark",
-      caption: "Highway landmark board at Annapurna-1, Kaski, managed by Proprietor Ex. Army Yubaraj KC."
+      caption: "The hotel and restaurant frontage at Annapurna-1, Kaski, with the roadside signboard and snow peaks rising behind."
     },
     {
-      id: "gal-real-menu",
-      category: "food",
-      title: "Authentic In-House Menu Board",
-      image: "assets/images/restaurant_menu_board.jpg",
-      badge: "Verified Menu",
-      caption: "The restaurant's chalkboard featuring Nepali Khana, Khaja snacks, and the signature 'Ek Chari Panch Thari'."
+      id: "gal-restro-building",
+      category: "property",
+      title: "Lucky Twins on the Kaski Hillside",
+      image: "assets/images/web/restro_building.jpg",
+      thumb: "assets/images/web/thumbs/restro_building.jpg",
+      badge: "Mountain Property",
+      caption: "The multi-storey lodge nestled among green terraces above the Gandaki highway."
     },
     {
-      id: "gal-khana-thali",
-      category: "food",
-      title: "Hand-Crafted Nepali Khana Thali",
-      image: "assets/images/nepali_thali_curry.jpg",
-      badge: "Signature Dining",
-      caption: "Traditional brass platter serving freshly cooked local chicken curry, lentil soup, rice, and mountain timur pickle."
+      id: "gal-view-restro",
+      category: "property",
+      title: "Annapurna & Machhapuchhre Panorama",
+      image: "assets/images/web/view_form_restro.jpg",
+      thumb: "assets/images/web/thumbs/view_form_restro.jpg",
+      badge: "Himalayan Vista",
+      caption: "The sweeping snowline seen from our restaurant terrace — Annapurna, Machhapuchhre (Fishtail), and the surrounding ridgeline."
+    },
+    {
+      id: "gal-rooftop",
+      category: "property",
+      title: "Rooftop Terrace Mountain View",
+      image: "assets/images/web/rooftop_view.jpg",
+      thumb: "assets/images/web/thumbs/rooftop_view.jpg",
+      badge: "Terrace Views",
+      caption: "A shaded rooftop table looking out over the ranges — the perfect spot for morning tea."
+    },
+    {
+      id: "gal-reception",
+      category: "property",
+      title: "Reception & Guest Lounge",
+      image: "assets/images/web/reception.jpg",
+      thumb: "assets/images/web/thumbs/reception.jpg",
+      badge: "Warm Welcome",
+      caption: "Our reception corner, stocked with travel essentials and staffed by the family behind Lucky Twins."
     },
     {
       id: "gal-woodfire-hearth",
       category: "food",
       title: "Traditional Wood-Fire Cooking Hearth",
-      image: "assets/images/woodfire_chicken_hearth.jpg",
+      image: "assets/images/web/woodfire_cookingplace.jpg",
+      thumb: "assets/images/web/thumbs/woodfire_cookingplace.jpg",
       badge: "Mountain Kitchen",
-      caption: "Slow-simmered chicken curry prepared over open firewood embers, infusing rich rustic smoky flavor into every bite."
+      caption: "Local chicken and mountain curries slow-simmered over open firewood embers in our brick hearth."
     },
     {
-      id: "gal-dhindo-set",
+      id: "gal-table-view",
       category: "food",
-      title: "Traditional Himalayan Dhindo Set",
-      image: "assets/images/dhindo_mountain_specialty.jpg",
-      badge: "Himalayan Specialty",
-      caption: "Hot organic buckwheat dhindo with pure clarified ghee and tender mountain meat gravy."
+      title: "Table With A Himalayan View",
+      image: "assets/images/web/table_view.jpg",
+      thumb: "assets/images/web/thumbs/table_view.jpg",
+      badge: "Dining With A View",
+      caption: "Every meal comes with an uninterrupted panorama of the Annapurna range."
     },
     {
-      id: "gal-room-interior",
+      id: "gal-dining-menu",
+      category: "food",
+      title: "Our Original In-House Menu Board",
+      image: "assets/images/web/diningarea_menu.jpg",
+      thumb: "assets/images/web/thumbs/diningarea_menu.jpg",
+      badge: "Verified Menu",
+      caption: "The handwritten menu board beside the guest aquarium, listing Nepali Khana, Khaja snacks, the signature Ek Chari Panch Thari, and current prices."
+    },
+    {
+      id: "gal-dining-terrace",
+      category: "food",
+      title: "Open-Air Dining Terrace",
+      image: "assets/images/web/diningarea_with_view.jpg",
+      thumb: "assets/images/web/thumbs/diningarea_with_view.jpg",
+      badge: "Al Fresco Dining",
+      caption: "Our covered terrace dining area, open to the mountain breeze and valley greenery."
+    },
+    {
+      id: "gal-bedroom",
       category: "rooms",
-      title: "Pine-Wood Mountain Lodge Room",
-      image: "assets/images/room_himalayan_view.jpg",
+      title: "Cosy Twin-Bed Guest Room",
+      image: "assets/images/web/bedroom.jpg",
+      thumb: "assets/images/web/thumbs/bedroom.jpg",
       badge: "Accommodation",
-      caption: "Cozy interior with panoramic view windows, clean bedding, and natural wood aesthetics."
+      caption: "Clean, simple mountain lodging with warm bedding, natural light, and a peaceful night's rest."
+    },
+    {
+      id: "gal-double-bed",
+      category: "rooms",
+      title: "Double-Bed Mountain Room",
+      image: "assets/images/web/double_bed.jpg",
+      thumb: "assets/images/web/thumbs/double_bed.jpg",
+      badge: "Comfortable Stay",
+      caption: "A spacious double room with fresh linens and windows opening to the Kaski hillside."
+    },
+    {
+      id: "gal-view-from-room",
+      category: "rooms",
+      title: "Himalayan View From Your Window",
+      image: "assets/images/web/view_from_room.jpg",
+      thumb: "assets/images/web/thumbs/view_from_room.jpg",
+      badge: "Room With A View",
+      caption: "Wake up to Machhapuchhre framed by your bedroom window."
+    },
+    {
+      id: "gal-sitting-area",
+      category: "rooms",
+      title: "Family Sitting Area",
+      image: "assets/images/web/sitting_area.jpg",
+      thumb: "assets/images/web/thumbs/sitting_area.jpg",
+      badge: "Relax & Unwind",
+      caption: "A comfortable shared lounge where guests can relax, chat, and watch the light change over the peaks."
     }
   ],
 
@@ -522,8 +571,13 @@ function initNavigation() {
 let currentMenuCategory = "all";
 let currentMenuSearch = "";
 
+// Tolerant search: ignores case, spacing and punctuation so "momo" matches "Mo:Mo".
+function normalizeSearch(value) {
+  return (value || "").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, "");
+}
+
 function initMenu() {
-  const tabs = document.querySelectorAll(".menu-tab-btn");
+  const tabs = document.querySelectorAll(".menu-tabs .menu-tab-btn");
   const searchInput = document.getElementById("menuSearchInput");
   const printBtn = document.getElementById("printMenuBtn");
   const viewOriginalMenuBtn = document.getElementById("viewOriginalMenuBtn");
@@ -552,7 +606,12 @@ function initMenu() {
 
   if (viewOriginalMenuBtn) {
     viewOriginalMenuBtn.addEventListener("click", () => {
-      openLightbox("assets/images/restaurant_menu_board.jpg", "Authentic Mountain Lodge Chalkboard Menu Board with Nepali Khana & Khaja");
+      const galleryId = viewOriginalMenuBtn.dataset.galleryPhoto;
+      const photo = CONFIG.gallery.find(item => item.id === `gal-${galleryId}`) ||
+        CONFIG.gallery.find(item => item.image.includes(galleryId));
+      if (photo) {
+        openLightbox(photo.image, `${photo.title} — ${photo.caption}`);
+      }
     });
   }
 
@@ -565,10 +624,11 @@ function renderMenuItems() {
 
   const filtered = CONFIG.menuItems.filter(item => {
     const matchesCategory = currentMenuCategory === "all" || item.category === currentMenuCategory;
-    const matchesSearch = !currentMenuSearch || 
-      item.name.toLowerCase().includes(currentMenuSearch) || 
-      item.nepaliName.toLowerCase().includes(currentMenuSearch) ||
-      item.description.toLowerCase().includes(currentMenuSearch);
+    const q = normalizeSearch(currentMenuSearch);
+    const matchesSearch = !q ||
+      normalizeSearch(item.name).includes(q) ||
+      normalizeSearch(item.nepaliName).includes(q) ||
+      normalizeSearch(item.description).includes(q);
     return matchesCategory && matchesSearch;
   });
 
@@ -610,6 +670,7 @@ let visibleGalleryItems = [];
 
 function initGallery() {
   const filterTabs = document.querySelectorAll(".gallery-tab-btn");
+  const grid = document.getElementById("galleryGrid");
   const lightbox = document.getElementById("lightboxModal");
   const closeBtn = document.querySelector(".lightbox-close");
   const prevBtn = document.querySelector(".lightbox-prev");
@@ -623,6 +684,23 @@ function initGallery() {
       renderGallery();
     });
   });
+
+  // Open photos by click, tap, Enter or Space
+  if (grid) {
+    grid.addEventListener("click", (e) => {
+      const item = e.target.closest(".gallery-item");
+      if (!item) return;
+      openLightboxByIndex(Number(item.dataset.index));
+    });
+
+    grid.addEventListener("keydown", (e) => {
+      if (e.key !== "Enter" && e.key !== " ") return;
+      const item = e.target.closest(".gallery-item");
+      if (!item) return;
+      e.preventDefault();
+      openLightboxByIndex(Number(item.dataset.index));
+    });
+  }
 
   if (closeBtn) closeBtn.addEventListener("click", closeLightbox);
   if (prevBtn) prevBtn.addEventListener("click", showPrevLightboxImage);
@@ -667,15 +745,24 @@ function renderGallery() {
     return currentGalleryFilter === "all" || item.category === currentGalleryFilter;
   });
 
-  container.innerHTML = visibleGalleryItems.map((item, index) => `
-    <div class="gallery-item" onclick="openLightboxByIndex(${index})" role="button" tabindex="0" aria-label="${escapeHtml(item.title)}">
-      <img src="${item.image}" alt="${escapeHtml(item.title)}" loading="lazy" />
+  container.innerHTML = visibleGalleryItems.map((item, index) => {
+    const thumb = item.thumb || item.image;
+    return `
+    <div class="gallery-item" data-index="${index}" role="button" tabindex="0" aria-label="View larger photo: ${escapeHtml(item.title)}">
+      <img
+        src="${thumb}"
+        srcset="${thumb} 800w, ${item.image} 1600w"
+        sizes="(max-width: 580px) 92vw, (max-width: 1024px) 45vw, 380px"
+        alt="${escapeHtml(item.title)}"
+        loading="lazy"
+        decoding="async" />
       <div class="gallery-caption-overlay">
         <span class="gallery-caption-badge">${escapeHtml(item.badge)}</span>
         <h4 class="gallery-caption-title">${escapeHtml(item.title)}</h4>
       </div>
     </div>
-  `).join("");
+  `;
+  }).join("");
 }
 
 function openLightboxByIndex(index) {
